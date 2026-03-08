@@ -1,0 +1,55 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">&copy; {year} Shivani Garg Patel</p>
+    <nav class="footer__nav">
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+      <a href="/connect/">Connect</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-black);
+    color: var(--color-gray-400);
+    padding: 2rem 0;
+  }
+
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__copy {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .footer__nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer__nav a {
+    color: var(--color-gray-400);
+    font-size: 0.85rem;
+  }
+
+  .footer__nav a:hover {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .footer__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>

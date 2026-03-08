@@ -1,0 +1,79 @@
+---
+interface Props {
+  title: string;
+  org: string;
+  period: string;
+  description?: string;
+}
+const { title, org, period, description } = Astro.props;
+---
+
+<div class="exp-card">
+  <div class="exp-card__marker"></div>
+  <div class="exp-card__content">
+    {period && <span class="exp-card__period">{period}</span>}
+    <h3>{title}</h3>
+    <p class="exp-card__org">{org}</p>
+    {description && <p class="exp-card__desc">{description}</p>}
+  </div>
+</div>
+
+<style>
+  .exp-card {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .exp-card__marker {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    margin-top: 0.35rem;
+    position: relative;
+  }
+
+  .exp-card__marker::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 2rem - 12px);
+    background: var(--color-gray-200);
+  }
+
+  .exp-card:last-child .exp-card__marker::after {
+    display: none;
+  }
+
+  .exp-card__period {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-400);
+    font-weight: 500;
+  }
+
+  .exp-card__content h3 {
+    margin-bottom: 0.15rem;
+  }
+
+  .exp-card__org {
+    color: var(--color-blue);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .exp-card__desc {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 0;
+  }
+</style>

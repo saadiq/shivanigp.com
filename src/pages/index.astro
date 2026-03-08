@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FocusAreas from '../components/FocusAreas.astro';
+---
+
+<BaseLayout title="Home">
+  <Hero />
+  <FocusAreas />
+
+  <section class="section section--gray">
+    <div class="container">
+      <span class="about__label">About</span>
+      <h2 class="about__heading">15+ years at the intersection of philanthropy, impact investing, and technology</h2>
+      <p class="about-brief">
+        Shivani brings a rare combination of strategic vision and operational depth to every engagement.
+        She has led multi-hundred-million-dollar investment strategies and built partnerships across the
+        public, private, and social sectors.
+      </p>
+      <a href="/about/" class="btn btn--outline">Learn More</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="pub__label">Publications</span>
+      <h2 class="pub__heading">Thought Leadership</h2>
+      <div class="publications">
+        <a href="https://ssir.org" target="_blank" rel="noopener noreferrer" class="pub-link">
+          <span>Stanford Social Innovation Review</span>
+          <span class="pub-link__arrow">&rarr;</span>
+        </a>
+        <a href="https://huffpost.com" target="_blank" rel="noopener noreferrer" class="pub-link">
+          <span>HuffPost</span>
+          <span class="pub-link__arrow">&rarr;</span>
+        </a>
+        <a href="https://skoll.org" target="_blank" rel="noopener noreferrer" class="pub-link">
+          <span>Skoll.org</span>
+          <span class="pub-link__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <h2>Ready to create lasting impact?</h2>
+      <p>Let's explore how strategic collaboration can drive meaningful change.</p>
+      <a href="/connect/" class="btn btn--primary cta-banner__btn">Let's Connect</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-600);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .about__heading {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .about-brief {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+  }
+
+  .pub__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-600);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub__heading {
+    margin-bottom: 2rem;
+  }
+
+  .publications {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pub-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    font-weight: 400;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--color-gray-200);
+    transition: color 0.2s;
+  }
+
+  .pub-link:first-child {
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .pub-link:hover {
+    color: var(--color-blue);
+  }
+
+  .pub-link__arrow {
+    font-size: 1.2rem;
+    color: var(--color-gray-400);
+    transition: color 0.2s;
+  }
+
+  .pub-link:hover .pub-link__arrow {
+    color: var(--color-blue);
+  }
+
+  .cta-banner {
+    background: var(--color-black);
+    padding: 4rem 0;
+  }
+
+  .cta-banner__inner {
+    text-align: center;
+  }
+
+  .cta-banner h2 {
+    color: var(--color-white);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-banner p {
+    color: var(--color-gray-400);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-banner__btn {
+    background: var(--color-white);
+    color: var(--color-black);
+  }
+
+  .cta-banner__btn:hover {
+    background: white;
+    color: var(--color-black);
+  }
+</style>

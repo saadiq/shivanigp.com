@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+---
+
+<BaseLayout title="About" description="Learn about Shivani Garg Patel's career in philanthropy, impact investing, and social entrepreneurship.">
+  <section class="page-header">
+    <div class="container">
+      <h1>About</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container bio">
+      <p class="bio__lead">
+        Shivani Garg Patel is a seasoned strategist and leader with over 15 years of experience
+        at the intersection of philanthropy, impact investing, global health, and technology.
+        She currently serves as a Senior Strategic Advisor, working with foundations, social
+        enterprises, and mission-driven organizations on a fractional basis as a Chief Strategy Officer.
+      </p>
+      <p>
+        As a Lecturer at UC Berkeley's Haas School of Business, Shivani teaches social
+        entrepreneurship, drawing on her extensive experience building and scaling
+        organizations that address the world's most pressing challenges.
+      </p>
+      <p>
+        Most recently, Shivani spent nearly a decade at the Skoll Foundation, where she served
+        as Chief Strategy Officer and Principal. In these roles, she led the foundation's
+        multi-hundred-million-dollar investment strategy, designed new programmatic frameworks,
+        and cultivated partnerships that amplified the impact of social entrepreneurs worldwide.
+      </p>
+      <p>
+        Earlier in her career, Shivani co-founded Samahope, an innovative crowdfunding platform
+        for global health, and held roles at McKinsey & Company, Microsoft, Beyond Capital Fund,
+        the Grameen Foundation, the World Bank, and the World Health Organization.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <SectionHeading title="Career" />
+      <div class="timeline">
+        <ExperienceCard
+          title="Sr. Strategic Advisor (Fractional CSO)"
+          org="Independent"
+          period="Jan 2026 — Present"
+          description="Advising foundations and social enterprises on strategy, capital allocation, and organizational design."
+        />
+        <ExperienceCard
+          title="Lecturer"
+          org="UC Berkeley Haas School of Business"
+          period="Aug 2025 — Present"
+          description="Teaching social entrepreneurship to the next generation of impact leaders."
+        />
+        <ExperienceCard
+          title="Chief Strategy Officer"
+          org="Skoll Foundation"
+          period="Aug 2019 — Jan 2026"
+          description="Led multi-hundred-million-dollar investment strategy and designed new programmatic frameworks for social entrepreneurs."
+        />
+        <ExperienceCard
+          title="Principal"
+          org="Skoll Foundation"
+          period="Jul 2016 — Aug 2019"
+          description="Managed portfolio investments and partnerships supporting social entrepreneurs globally."
+        />
+        <ExperienceCard
+          title="Co-founder"
+          org="Samahope"
+          period="2012 — 2016"
+          description="Built a crowdfunding platform enabling direct funding of life-saving medical treatments globally."
+        />
+        <ExperienceCard
+          title="Associate"
+          org="Beyond Capital Fund"
+          period=""
+          description="Supported impact investments in early-stage social enterprises in South Asia."
+        />
+        <ExperienceCard
+          title="Business Analyst"
+          org="McKinsey & Company"
+          period=""
+          description="Strategy consulting across healthcare and technology sectors."
+        />
+        <ExperienceCard
+          title="Program Manager"
+          org="Microsoft"
+          period=""
+          description="Product and program management in the technology sector."
+        />
+        <ExperienceCard
+          title="Roles at Grameen Foundation, World Bank & WHO"
+          org="Global Development"
+          period=""
+          description="Early career in global health and international development."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Education" />
+      <div class="education">
+        <div class="edu-card">
+          <h3>MBA</h3>
+          <p class="edu-card__school">MIT Sloan School of Management</p>
+        </div>
+        <div class="edu-card">
+          <h3>BS & BA</h3>
+          <p class="edu-card__school">University of California, Berkeley</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <SectionHeading title="Philosophy" />
+      <blockquote class="philosophy">
+        The most transformative change happens when we build collectively — when we listen deeply,
+        design with humility, and act with the understanding that the world's greatest challenges
+        require all of us working together.
+      </blockquote>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: var(--color-gray-100);
+    padding: 3.5rem 0;
+  }
+
+  .bio {
+    max-width: 750px;
+  }
+
+  .bio p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    font-weight: 300;
+    color: var(--color-gray-600);
+  }
+
+  .bio__lead {
+    font-weight: 300;
+  }
+
+  .timeline {
+    max-width: 700px;
+  }
+
+  .education {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .edu-card {
+    background: var(--color-gray-100);
+    padding: 1.5rem 2rem;
+    flex: 1;
+    min-width: 250px;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .edu-card h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-card__school {
+    color: var(--color-blue);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .philosophy {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: var(--color-gray-600);
+    border-left: 3px solid var(--color-gray-200);
+    padding-left: 1.5rem;
+    max-width: 700px;
+    font-style: italic;
+  }
+</style>

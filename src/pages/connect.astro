@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Connect" description="Get in touch with Shivani Garg Patel for advisory engagements, speaking, and collaboration.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Let's Connect</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container connect-content">
+      <p class="connect-message">
+        I believe the most meaningful work emerges from genuine connection and shared purpose.
+        Whether you're exploring a new strategic direction, seeking an advisor for your foundation
+        or social enterprise, or looking for a thought partner on systems-level challenges —
+        I'd love to hear from you.
+      </p>
+
+      <a
+        href="https://linkedin.com/in/shivanigargpatel"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--primary connect-btn"
+      >
+        Connect on LinkedIn
+      </a>
+
+      <div class="availability">
+        <hr class="availability__rule" />
+        <h2 class="availability__label">Currently Open To</h2>
+        <ul>
+          <li>Fractional CSO & strategic advisory engagements</li>
+          <li>Board advisory & governance roles</li>
+          <li>Speaking engagements & panels</li>
+          <li>Academic collaborations & guest lectures</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: var(--color-gray-100);
+    padding: 3.5rem 0;
+  }
+
+  .connect-content {
+    max-width: 650px;
+  }
+
+  .connect-message {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    font-weight: 300;
+    color: var(--color-gray-600);
+    margin-bottom: 2rem;
+  }
+
+  .connect-btn {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1rem 2.5rem;
+  }
+
+  .availability {
+    margin-top: 3.5rem;
+  }
+
+  .availability__rule {
+    border: none;
+    height: 1px;
+    background: var(--color-gray-200);
+    margin-bottom: 1.5rem;
+  }
+
+  .availability__label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--color-gray-600);
+    margin-bottom: 1.25rem;
+  }
+
+  .availability ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .availability li {
+    padding: 0.5rem 0;
+    color: var(--color-gray-600);
+    border-bottom: 1px solid var(--color-gray-200);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .availability li:last-child {
+    border-bottom: none;
+  }
+
+  .availability li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-blue);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+  }
+</style>

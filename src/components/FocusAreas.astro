@@ -1,0 +1,97 @@
+---
+const areas = [
+  {
+    title: 'Strategy & Innovation',
+    description: 'Designing bold strategies that drive systemic change and unlock new opportunities for impact.',
+  },
+  {
+    title: 'Capital Allocation & Funding',
+    description: 'Guiding philanthropic and investment capital toward high-impact, scalable solutions.',
+  },
+  {
+    title: 'Social Impact & Systems Change',
+    description: 'Building programs and frameworks that address root causes and create lasting outcomes.',
+  },
+  {
+    title: 'Cross-Sector Collaboration',
+    description: 'Bridging the public, private, and social sectors to catalyze collective action.',
+  },
+];
+---
+
+<section class="section focus-areas">
+  <div class="container">
+    <span class="focus-areas__label">Expertise</span>
+    <h2 class="focus-areas__heading">Focus Areas</h2>
+    <div class="focus-areas__grid">
+      {areas.map(area => (
+        <div class="focus-card">
+          <h3>{area.title}</h3>
+          <p>{area.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .focus-areas__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-600);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .focus-areas__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .focus-areas__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-card {
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    border-right: 1px solid var(--color-gray-200);
+  }
+
+  .focus-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .focus-card:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .focus-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .focus-card p {
+    color: var(--color-gray-600);
+    font-weight: 300;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .focus-areas__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .focus-card {
+      border-right: none;
+    }
+
+    .focus-card:last-child {
+      border-bottom: none;
+    }
+  }
+</style>

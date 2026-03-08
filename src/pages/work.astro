@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const services = [
+  {
+    title: 'Strategic Planning & Organizational Design',
+    description: 'Crafting long-term strategies and organizational structures that align mission with impact.',
+  },
+  {
+    title: 'Capital Strategy & Philanthropic Advising',
+    description: 'Designing investment frameworks and advising on capital deployment for maximum social returns.',
+  },
+  {
+    title: 'Innovation & Program Design',
+    description: 'Building new programs and initiatives that address root causes of systemic challenges.',
+  },
+  {
+    title: 'Board Advisory & Governance',
+    description: 'Providing strategic counsel to boards on governance, growth, and organizational effectiveness.',
+  },
+];
+
+const expertise = [
+  'Strategy', 'Innovation', 'Impact Measurement', 'Systems Change',
+  'Cross-sector Partnerships', 'Social Entrepreneurship', 'Philanthropy', 'Impact Investing',
+];
+
+const publications = [
+  { title: 'Stanford Social Innovation Review', url: 'https://ssir.org', type: 'Articles on social innovation and impact strategy' },
+  { title: 'Skoll.org', url: 'https://skoll.org', type: 'Insights on social entrepreneurship and systems change' },
+  { title: 'HuffPost', url: 'https://huffpost.com', type: 'Commentary on global health and social impact' },
+];
+---
+
+<BaseLayout title="Work & Expertise" description="Explore Shivani Garg Patel's advisory services, areas of expertise, teaching, and publications.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Work & Expertise</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Advisory Services" subtitle="Fractional Chief Strategy Officer for mission-driven organizations" />
+      <p class="advisory-intro">
+        As a Senior Strategic Advisor, Shivani works with foundations, social enterprises, and
+        nonprofits on a fractional basis, bringing C-suite strategic leadership without the
+        full-time overhead. Her approach combines deep sector expertise with rigorous analytical
+        frameworks honed at McKinsey and the Skoll Foundation.
+      </p>
+      <div class="services-grid">
+        {services.map(service => (
+          <div class="service-card">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <SectionHeading title="Areas of Expertise" />
+      <div class="tags">
+        {expertise.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Teaching" />
+      <div class="teaching-card">
+        <h3>Social Entrepreneurship</h3>
+        <p class="teaching-card__school">UC Berkeley Haas School of Business</p>
+        <p class="teaching-card__desc">
+          Shivani teaches a course on social entrepreneurship, guiding MBA students through
+          the frameworks, tools, and real-world case studies that define effective social ventures.
+          Drawing on her experience as a co-founder, investor, and strategist, she helps students
+          develop the skills to build organizations that create both economic value and social impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <SectionHeading title="Publications & Media" />
+      <div class="publications-list">
+        {publications.map(pub => (
+          <a href={pub.url} target="_blank" rel="noopener noreferrer" class="pub-item">
+            <div>
+              <h3>{pub.title}</h3>
+              <p>{pub.type}</p>
+            </div>
+            <span class="pub-item__arrow">&rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: var(--color-gray-100);
+    padding: 3.5rem 0;
+  }
+
+  .advisory-intro {
+    max-width: 700px;
+    color: var(--color-gray-600);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    border-right: 1px solid var(--color-gray-200);
+  }
+
+  .service-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .service-card:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+  }
+
+  .service-card p {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tag {
+    background: var(--color-gray-100);
+    border-radius: 0;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-black);
+  }
+
+  .teaching-card {
+    background: var(--color-gray-100);
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .teaching-card h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .teaching-card__school {
+    color: var(--color-blue);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .teaching-card__desc {
+    color: var(--color-gray-600);
+    font-weight: 300;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pub-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--color-gray-200);
+    transition: color 0.2s;
+  }
+
+  .pub-item:first-child {
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .pub-item:hover {
+    color: var(--color-blue);
+  }
+
+  .pub-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-item p {
+    color: var(--color-gray-600);
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .pub-item__arrow {
+    font-size: 1.2rem;
+    color: var(--color-gray-400);
+    flex-shrink: 0;
+    margin-left: 2rem;
+  }
+
+  .pub-item:hover .pub-item__arrow {
+    color: var(--color-blue);
+  }
+
+  @media (max-width: 600px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      border-right: none;
+    }
+
+    .service-card:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
