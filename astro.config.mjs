@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // For GitHub Pages with a repo name, use the repo URL and base path.
 export default defineConfig({
   site: 'https://saadiq.github.io',
-  base: '/shivanigp.com',
+  base: '/shivanigp.com/',
   integrations: [sitemap()],
 });

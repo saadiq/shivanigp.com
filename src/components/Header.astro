@@ -1,16 +1,17 @@
 ---
+const base = import.meta.env.BASE_URL;
 const pathname = Astro.url.pathname;
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about/' },
-  { label: 'Work', href: '/work/' },
-  { label: 'Connect', href: '/connect/' },
+  { label: 'Home', href: base },
+  { label: 'About', href: `${base}about/` },
+  { label: 'Work', href: `${base}work/` },
+  { label: 'Connect', href: `${base}connect/` },
 ];
 ---
 
 <header class="header">
   <nav class="container header__nav">
-    <a href="/" class="header__logo">Shivani Garg Patel</a>
+    <a href={base} class="header__logo">Shivani Garg Patel</a>
     <input type="checkbox" id="nav-toggle" class="header__toggle-input sr-only" aria-label="Toggle navigation" />
     <label for="nav-toggle" class="header__toggle" aria-label="Menu">
       <span></span><span></span><span></span>

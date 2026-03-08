@@ -17,7 +17,7 @@ import FocusAreas from '../components/FocusAreas.astro';
         She has led multi-hundred-million-dollar investment strategies and built partnerships across the
         public, private, and social sectors.
       </p>
-      <a href="/about/" class="btn btn--outline">Learn More</a>
+      <a href={`${import.meta.env.BASE_URL}about/`} class="btn btn--outline">Learn More</a>
     </div>
   </section>
 
@@ -46,7 +46,7 @@ import FocusAreas from '../components/FocusAreas.astro';
     <div class="container cta-banner__inner">
       <h2>Ready to create lasting impact?</h2>
       <p>Let's explore how strategic collaboration can drive meaningful change.</p>
-      <a href="/connect/" class="btn btn--primary cta-banner__btn">Let's Connect</a>
+      <a href={`${import.meta.env.BASE_URL}connect/`} class="btn btn--primary cta-banner__btn">Let's Connect</a>
     </div>
   </section>
 </BaseLayout>
