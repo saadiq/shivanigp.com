@@ -1,43 +1,18 @@
-# Astro Starter Kit: Minimal
+# shivanigp.com
+
+Personal website for Shivani Garg Patel — Sr. Strategic Advisor & Lecturer at UC Berkeley Haas.
+
+Built with [Astro](https://astro.build). Deployed to [GitHub Pages](https://saadiq.github.io/shivanigp.com/).
+
+## Development
 
 ```sh
-bun create astro@latest -- --template minimal
+bun install
+bun dev        # localhost:4321
+bun build      # production build to ./dist/
+bun preview    # preview build locally
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushes to `main` auto-deploy via GitHub Actions. The site is hosted at a subpath (`/shivanigp.com/`), configured via `base` in `astro.config.mjs`.
